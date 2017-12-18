@@ -1,0 +1,11 @@
+[[package]]
+name = "pathfinder"
+version = "0.1.0"
+
+[[package]]
+name = "pathfinder_client"
+version = "0.1.0"
+dependencies = [
+ "pathfinder 0.1.0",
+]
+

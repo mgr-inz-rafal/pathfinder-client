@@ -1,0 +1,7 @@
+[package]
+name = "pathfinder_client"
+version = "0.1.0"
+authors = ["mgr_inz_rafal <rchabowski@gmail.com>"]
+
+[dependencies]
+pathfinder = { path = "../pathfinder" }
