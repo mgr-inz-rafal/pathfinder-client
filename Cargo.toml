@@ -5,3 +5,7 @@ authors = ["mgr_inz_rafal <rchabowski@gmail.com>"]
 
 [dependencies]
 pathfinder = { path = "../pathfinder" }
+iron = "*"
+
+[dependencies.bodyparser]
+git = "https://github.com/iron/body-parser.git"
