@@ -1,3 +1,7 @@
+#[macro_use]
+extern crate serde_derive;
+extern crate serde;
+extern crate serde_json;
 extern crate iron;
 extern crate bodyparser;
 extern crate pathfinder;
@@ -6,17 +10,30 @@ use pathfinder::*;
 use iron::prelude::*;
 use iron::status;
 
+#[derive(Deserialize)]
+struct PathfinderRequest {
+    pub width: u64,
+    pub height: u64,
+    pub start: (u64, u64),
+    pub destination: (u64, u64),
+    pub field: Vec<f64>
+}
 
 fn main() {
     Iron::new(|x: &mut Request| {
     let body = x.get::<bodyparser::Raw>();
     match body {
-        Ok(Some(body)) => println!("Read body:\n{}", body),
+        Ok(Some(body)) => 
+        {
+            println!("Read body:\n{}\n", body);
+            let deserialized: PathfinderRequest = serde_json::from_str(&body).unwrap();
+            println!("Deserialized field size: {}", deserialized.width * deserialized.height);
+        },
         Ok(None) => println!("No body"),
         Err(err) => println!("Error: {:?}", err)
     }        Ok(Response::with((status::Ok, "Hello World!")))
     }).http("localhost:3000").unwrap();
-    
+
     /*
     let test_level = vec![
         1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0,
