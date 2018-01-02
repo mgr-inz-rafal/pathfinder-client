@@ -1,7 +1,5 @@
-# Pathfinder Client
-Simple Rust client for my Pathfinder library
-
-https://github.com/mgr-inz-rafal/pathfinder
+# Pathfinder Server
+This server uses my Rust Pathfinder Library (https://github.com/mgr-inz-rafal/pathfinder) to serve shortest paths via WebService.
 
 ## License
 This project is licensed under "THE BEER-WARE LICENSE" (Revision 42).
