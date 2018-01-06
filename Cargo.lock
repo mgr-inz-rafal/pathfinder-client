@@ -193,7 +193,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "pathfinder_client"
+name = "pathfinder_server"
 version = "0.1.0"
 dependencies = [
  "bodyparser 0.8.0 (git+https://github.com/iron/body-parser.git)",

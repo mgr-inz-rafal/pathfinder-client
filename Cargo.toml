@@ -1,5 +1,5 @@
 [package]
-name = "pathfinder_client"
+name = "pathfinder_server"
 version = "0.1.0"
 authors = ["mgr_inz_rafal <rchabowski@gmail.com>"]
 
