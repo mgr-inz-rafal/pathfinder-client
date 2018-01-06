@@ -47,7 +47,7 @@ fn main() {
             }
         Ok(Response::with((status::Ok, "Hello World!")))
         }
-    ).http("localhost:3000").unwrap();
+    ).http("[::]:3000").unwrap();
 
     /*
     let test_level = vec![
