@@ -13,10 +13,10 @@ use iron::status;
 // Share between pathfinder and pathfinder-server
 #[derive(Deserialize)]
 struct PathfinderRequest {
-    pub width: u64,
-    pub height: u64,
-    pub start: (u64, u64),
-    pub destination: (u64, u64),
+    pub width: i64,
+    pub height: i64,
+    pub start: (i64, i64),
+    pub destination: (i64, i64),
     pub field: Vec<f64>
 }
 
